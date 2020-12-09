@@ -7,8 +7,6 @@ class App extends Component {
         this.state = {
             count: 0
         }
-
-        this.increment = this.increment.bind(this)
     }
     
     increment = () => {
@@ -21,7 +19,7 @@ class App extends Component {
         return (
             <div>
                 <h1>{this.state.count}</h1>
-                <button onClick={() => this.increment()}>+</button>
+                <button onClick={this.increment}>+</button>
             </div>
         )
     }
