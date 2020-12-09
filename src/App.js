@@ -12,9 +12,7 @@ class App extends Component {
     increment() {
         const currentCount = this.state.count
         const newCount = currentCount + 1
-        this.state = {
-            count: newCount
-        }
+        this.setState({ count: newCount })
     }
 
     render() {
