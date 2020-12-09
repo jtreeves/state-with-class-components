@@ -43,7 +43,7 @@ class App extends Component {
         return (
             <div>
                 <h1>{this.state.count}</h1>
-                <input value={this.state.inputtedNumber} onChange={this.changeInput} />
+                <input type='number' value={this.state.inputtedNumber} onChange={this.changeInput} />
                 <button onClick={this.increment}>+</button>
                 <button onClick={this.decrement}>-</button>
                 <button onClick={this.multiply}>*</button>
