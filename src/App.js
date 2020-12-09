@@ -8,11 +8,20 @@ class App extends Component {
             count: 0
         }
     }
+    
+    increment() {
+        const currentCount = this.state.count
+        const newCount = currentCount + 1
+        this.state = {
+            count: newCount
+        }
+    }
+
     render() {
         return (
             <div>
                 <h1>{this.state.count}</h1>
-                <button>+</button>
+                <button onClick={increment}>+</button>
             </div>
         )
     }
