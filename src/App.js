@@ -27,13 +27,18 @@ class App extends Component {
         this.setState({ count: newCount })
     }
 
+    triple = () => {
+        this.setState({ count: this.state.count * 3 })
+    }
+
     render() {
         return (
             <div>
                 <h1>{this.state.count}</h1>
                 <button onClick={this.increment}>+</button>
                 <button onClick={this.decrement}>-</button>
-                <button onClick={this.double}>*</button>
+                <button onClick={this.double}>*2</button>
+                <button onClick={this.triple}>*3</button>
             </div>
         )
     }
