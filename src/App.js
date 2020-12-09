@@ -10,7 +10,9 @@ class App extends Component {
     }
     
     increment = () => {
-        this.setState({ count: this.state.count + 1 })
+        const amountToAdd = prompt('How much do you want to add?')
+        const newCount = this.state.count + parseInt(amountToAdd)
+        this.setState({ count: newCount })
     }
 
     decrement = () => {
