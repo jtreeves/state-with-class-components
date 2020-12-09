@@ -11,26 +11,22 @@ class App extends Component {
     }
     
     increment = () => {
-        const amountToAdd = prompt('How much do you want to add?')
-        const newCount = this.state.count + parseInt(amountToAdd)
+        const newCount = this.state.count + this.state.inputtedNumber
         this.setState({ count: newCount })
     }
 
     decrement = () => {
-        const amountToAdd = prompt('How much do you want to subtract?')
-        const newCount = this.state.count - parseInt(amountToAdd)
+        const newCount = this.state.count - this.state.inputtedNumber
         this.setState({ count: newCount })
     }
 
     multiply = () => {
-        const amountToAdd = prompt('How much do you want to multiply?')
-        const newCount = this.state.count * parseInt(amountToAdd)
+        const newCount = this.state.count * this.state.inputtedNumber
         this.setState({ count: newCount })
     }
 
     divide = () => {
-        const amountToAdd = prompt('How much do you want to divide?')
-        const newCount = this.state.count / parseInt(amountToAdd)
+        const newCount = this.state.count / this.state.inputtedNumber
         this.setState({ count: newCount })
     }
 
