@@ -10,21 +10,15 @@ class App extends Component {
     }
     
     increment = () => {
-        const currentCount = this.state.count
-        const newCount = currentCount + 1
-        this.setState({ count: newCount })
+        this.setState({ count: this.state.count + 1 })
     }
 
     decrement = () => {
-        const currentCount = this.state.count
-        const newCount = currentCount - 1
-        this.setState({ count: newCount })
+        this.setState({ count: this.state.count - 1 })
     }
 
     double = () => {
-        const currentCount = this.state.count
-        const newCount = currentCount * 2
-        this.setState({ count: newCount })
+        this.setState({ count: this.state.count * 2 })
     }
 
     triple = () => {
