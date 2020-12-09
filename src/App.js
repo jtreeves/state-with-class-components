@@ -5,7 +5,8 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            count: 0
+            count: 0,
+            inputtedNumber: 0
         }
     }
     
@@ -33,10 +34,16 @@ class App extends Component {
         this.setState({ count: newCount })
     }
 
+    changeInput = (event) => {
+        const newValue = parseInt(event.target.value) || 0
+        this.setState({ inputtedNumber: newValue })
+    }
+
     render() {
         return (
             <div>
                 <h1>{this.state.count}</h1>
+                <input value={this.state.inputtedNumber} onChange={this.changeInput} />
                 <button onClick={this.increment}>+</button>
                 <button onClick={this.decrement}>-</button>
                 <button onClick={this.multiply}>*</button>
