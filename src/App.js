@@ -11,7 +11,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <h1>NUMBER WILL GO HERE</h1>
+                <h1>{this.state.count}</h1>
                 <button>+</button>
             </div>
         )
